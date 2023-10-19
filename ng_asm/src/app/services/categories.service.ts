@@ -10,8 +10,7 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) { }
 
-  API_URL = process.env['API_CATE']
-
+  API_URL = 'http://localhost:7000/category'
 
   getAll(): Observable<any> {
     return this.http.get<any>(`${this.API_URL}`);

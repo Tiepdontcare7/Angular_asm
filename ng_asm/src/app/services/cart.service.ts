@@ -9,7 +9,7 @@ export class CartService {
 
   constructor(private http: HttpClient) { }
 
-  API_URL = process.env['API_CART']
+  API_URL = 'http://localhost:7000/cart'
 
   getAllCart(): Observable<any> {
     return this.http.get<any>(`${this.API_URL}/`);

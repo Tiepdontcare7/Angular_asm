@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class UsersService {
   constructor(private http: HttpClient) { }
 
-  API_URL = process.env['API_USERS']
+  API_URL = 'http://localhost:7000/auth'
 
 
   signUp(data: any): Observable<any> {

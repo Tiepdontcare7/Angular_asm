@@ -9,7 +9,7 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  API_URL = process.env['API_PRODUCTS']
+  API_URL = 'http://localhost:7000/products'
 
   getAll(limit: any, page: any): Observable<any> {
     return this.http.get<any>(`${this.API_URL}?_limit=${limit}&_page=${page}`);
