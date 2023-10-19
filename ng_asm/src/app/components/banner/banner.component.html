@@ -1,0 +1,9 @@
+<ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true" [interval]="2000">
+  <ng-template ngbSlide *ngFor="let item of bannerUrl; index as i">
+    <img class="h-[700px] object-cover" [src]="item.url" alt="Slide 1" style="width: 100%" />
+    <div class="carousel-caption">
+      <h3>Slide {{ i + 1 }}</h3>
+      <p>Đây là nội dung của slide {{ i + 1 }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
